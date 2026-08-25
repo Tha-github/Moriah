@@ -1,0 +1,22 @@
+/* ============================================
+   THEME.CSS — Identidade visual (Escola Moriah)
+   ÚNICO arquivo que muda ao adaptar este template
+   para as outras escolas da rede (Bela Vista Kids, Lumina).
+   Contém apenas variáveis de cor e a referência do logo.
+   ============================================ */
+
+:root {
+  /* Cores — valores provisórios (seção 5 do PROJETO-MORIAH.md).
+     Ajustar quando o cliente enviar o logotipo oficial. */
+  --azul: #1B5FA8;
+  --azul-escuro: #123F6E;
+  --azul-claro: #E8F1FA;
+  --amarelo: #F5C518;
+  --amarelo-escuro: #D9A400;
+  --cinza-texto: #5A6672;
+  --cinza-borda: #DDE3E8;
+  --branco: #FFFFFF;
+
+  /* Logo: aguardando arquivo do cliente (assets/logo.png) */
+  --logo-src: url("../assets/logo.png");
+}

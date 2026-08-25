@@ -1,0 +1,116 @@
+/* ============================================
+   BASE.CSS — Tipografia, espaçamento, layout base
+   e acessibilidade. Idêntico nos três sites da rede.
+   Usa apenas as variáveis de cor definidas em theme.css.
+   ============================================ */
+
+:root {
+  /* Tipografia */
+  --font-titulo: 'Poppins', sans-serif;
+  --font-corpo: 'Inter', sans-serif;
+
+  --fs-1: 14px;
+  --fs-2: 16px;
+  --fs-3: 18px;
+  --fs-4: 20px;
+  --fs-5: 24px;
+  --fs-6: 30px;
+  --fs-7: 38px;
+  --fs-8: 48px;
+
+  /* Espaçamento — escala de 8px */
+  --sp-1: 8px;
+  --sp-2: 16px;
+  --sp-3: 24px;
+  --sp-4: 32px;
+  --sp-5: 48px;
+  --sp-6: 64px;
+  --sp-7: 96px;
+
+  /* Layout */
+  --largura-maxima: 1200px;
+  --altura-header: 76px;
+  --raio-borda: 16px;
+  --raio-borda-pequeno: 12px;
+  --sombra-suave: 0 4px 20px rgba(18, 63, 110, 0.08);
+  --sombra-media: 0 8px 32px rgba(18, 63, 110, 0.14);
+  --transicao: 0.25s ease;
+}
+
+@media (max-width: 899px) {
+  :root {
+    --altura-header: 64px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--altura-header);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-corpo);
+  font-size: var(--fs-2);
+  line-height: 1.7;
+  color: var(--azul-escuro);
+  background-color: var(--branco);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Trava o scroll do body — usada pelo drawer mobile e pelo lightbox da galeria */
+body.no-scroll {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-titulo);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+p {
+  max-width: 65ch;
+}
+
+/* Foco visível para navegação por teclado */
+:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 2px;
+}
+
+/* Link para pular direto ao conteúdo */
+.skip-link {
+  position: absolute;
+  left: var(--sp-1);
+  top: -48px;
+  background-color: var(--azul);
+  color: var(--branco);
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--raio-borda-pequeno);
+  font-weight: 500;
+  z-index: 1000;
+  transition: top var(--transicao);
+}
+
+.skip-link:focus {
+  top: var(--sp-1);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin-inline: auto;
+  padding-inline: var(--sp-3);
+}
+
+.section {
+  padding-block: var(--sp-7);
+}
+
+@media (max-width: 899px) {
+  .section {
+    padding-block: var(--sp-6);
+  }
+}
