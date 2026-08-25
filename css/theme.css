@@ -3,16 +3,20 @@
    ÚNICO arquivo que muda ao adaptar este template
    para as outras escolas da rede (Bela Vista Kids, Lumina).
    Contém apenas variáveis de cor e a referência do logo.
+   Os nomes das variáveis (--cor-primaria, --cor-destaque etc.) são
+   genéricos de propósito: cada escola define seus próprios valores
+   de hex aqui, mantendo base.css e components.css idênticos nos
+   três sites da rede.
    ============================================ */
 
 :root {
   /* Cores — valores provisórios (seção 5 do PROJETO-MORIAH.md).
      Ajustar quando o cliente enviar o logotipo oficial. */
-  --azul: #1B5FA8;
-  --azul-escuro: #123F6E;
-  --azul-claro: #E8F1FA;
-  --amarelo: #F5C518;
-  --amarelo-escuro: #D9A400;
+  --cor-primaria: #1B5FA8;
+  --cor-primaria-escura: #123F6E;
+  --cor-primaria-clara: #E8F1FA;
+  --cor-destaque: #F5C518;
+  --cor-destaque-escura: #D9A400;
   --cinza-texto: #5A6672;
   --cinza-borda: #DDE3E8;
   --branco: #FFFFFF;

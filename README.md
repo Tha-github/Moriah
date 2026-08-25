@@ -115,8 +115,8 @@ que muda ao adaptar este mesmo template para as outras duas escolas da
 rede, Bela Vista Kids e Lumina). Contém apenas variáveis:
 
 ```css
---azul, --azul-escuro, --azul-claro,
---amarelo, --amarelo-escuro,
+--cor-primaria, --cor-primaria-escura, --cor-primaria-clara,
+--cor-destaque, --cor-destaque-escura,
 --cinza-texto, --cinza-borda, --branco
 ```
 
